@@ -8,10 +8,21 @@
     
     <link href="/style/css/homepage.css" type="text/css" rel="stylesheet" charset="utf-8"> 
 
- 
+    <script>document.getElementById("p1").innerHTML="使用者名稱: "+username;</script>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+        
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
-<body>
+<body>  
         <img src="/style/picture/homeTitlePicture.jpg" >
     <div id="container">
         <nav>
@@ -25,14 +36,106 @@
             </ul>
         </nav>   
         <header>
+              
             <div id="links">
                 <a href="">登出</a>
             </div>
+            <div id="user-name">
+                <p id="p1">使用者:</p>
+            </div>
         </header> 
-        <main>
-            
-        </main> 
+        
+        
+        <main> 
+                <table style="border:3px #cccccc solid;" cellpadding="10" border='1' id="table">
+                    <tr>
+                        <td>時段/日期</td><td>周一<br>2019/11/25</td><td>周二<br>2019/11/26</td><td>周三<br>2019/11/27</td><td>周四<br>2019/11/28</td><td>周五<br>2019/11/29</td><td>周六<br>2019/11/30</td><td>周日<br>2019/12/1</td>
+                    </tr>
+                    <tr><td>7:00~8:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>8:00~9:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>9:00~10:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>11:00~12:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>12:00~13:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>13:00~14:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>14:00~15:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>15:00~16:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>16:00~17:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <tr><td>17:00~18:00</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                    <div id="info-menu">
+                        <!--div class ="hide_selecter" id="selectByEquit"-->
+                        <form action="" method="post">   
+                            
+                            <div class="main_func_text">會議排程</div>
+                            <div class="inputer" id="search-date">
+                                起始日期：<input type="date" name="EXPdate" class="inparea">
+                                <div class="form-btn">
+                                    <button type="submit" value="submit" >上一周</button>     
+                                    <button type="submit" value="submit" >下一周</button>
+                                </div>
+                            </div>
+                            <div class="main_func" id="selectByEq_fbtn">
+                              <div class="main_func_text">預約會議室</div>
+                             </div>
+                                    <div class="inputer">
+                                            會議室編號：<select name="RoomID" class="inparea">
+                                                    <option value ="">第一會議室</option>
+                                                    <option value ="">第二會議室</option>
+                                                    <option value ="b">第三會議室</option>
+                                                    <option value ="c">第四會議室</option>
+                                            </select>
+                                    </div>                          
+                                    <div class="inputer">
+                                           開會日期：<input type="date" name="EXPdate" class="inparea">
+                                    </div>
+                                    
+                                            <div class="inputer">
+                                            開始時間：<select name="StartTime" class="inparea">
+                                                    <option value ="">7:00</option>
+                                                    <option value ="">8:00</option>
+                                                    <option value ="">9:00</option>
+                                                    <option value ="">10:00</option>
+                                                    <option value ="">11:00</option>
+                                                    <option value ="">12:00</option>
+                                                    <option value ="">13:00</option>
+                                                    <option value ="">14:00</option>
+                                                    <option value ="">15:00</option>
+                                                    <option value ="">16:00</option>
+                                                    <option value ="">17:00</option>
+                                            </select>
+                                            </div>        
+                                            <div class="inputer">
+                                                    結束時間：<select name="StartTime" class="inparea">
+                                                            <option value ="">8:00</option>
+                                                            <option value ="">9:00</option>
+                                                            <option value ="">10:00</option>
+                                                            <option value ="">11:00</option>
+                                                            <option value ="">12:00</option>
+                                                            <option value ="">13:00</option>
+                                                            <option value ="">14:00</option>
+                                                            <option value ="">15:00</option>
+                                                            <option value ="">16:00</option>
+                                                            <option value ="">17:00</option>
+                                                            <option value ="">18:00</option>
+                                                    </select>
+                                            </div>
+                                                    <div class="inputer">
+                                                            開會單位：<select name="RoomID" class="inparea">
+                                                                    <option value ="">婦產科</option>
+                                                                    <option value ="">精神科</option>
+                                                                    <option value ="">泌尿科</option>
+                                                                    <option value ="">科科</option>
+                                                            </select>
+                                                    </div>               
+                                    <div class="form-btn">
+                                    <button type="submit" value="submit" class="btn btn-primary">下一步</button>
+                                    </div>
+                                <!--/div> 
+                                
+                                </form>
+                            </div>
+                    </div>    
+                </main>  
+        </div>
     </div>    
-    <script src="homepage.js"></script>
 </body>
 </html>
