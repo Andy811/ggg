@@ -52,7 +52,9 @@ app.get('/reservation', function(request, response) {
 	response.sendFile(path.join(__dirname +  '/views' , 'reservation.html'));
 });
 
-
+app.get('/edit', function(request, response) {
+	response.sendFile(path.join(__dirname +  '/views' , 'edit.html'));
+});
 
 app.post('/auth', function(request, response) {
 	var username = request.body.username;
