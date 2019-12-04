@@ -33,8 +33,9 @@ app.get(/(.*)\.(jpg|gif|png|ico|css|js|txt)/i, function(req, res) {
     });
 });
 app.get('/homepage', function(request, response) {
+	
 	response.sendFile(path.join(__dirname + '/views','homepage.html'));
-	//response.send('<p id="p1">使用者:'+username+'</p>');
+	//response.send('<p id="p1">你好:'+username+'</p>');
 });
 app.get('/', function(request, response) {
 	response.sendFile(path.join(__dirname + '/views','login.html'));
@@ -66,6 +67,8 @@ app.post('/auth', function(request, response) {
 				request.session.loggedin = true;
 				request.session.username = username;
 				response.redirect('/homepage');
+				//使用者名稱測試
+				
 			} else {
 				response.redirect('/error');				
 			}			
@@ -76,6 +79,7 @@ app.post('/auth', function(request, response) {
 		response.end();
 	}
 });
+
 /*
 	if(username==username_test&&password==password_test){
 		request.session.loggedin = true;
@@ -89,6 +93,8 @@ app.post('/auth', function(request, response) {
 app.listen(3002,function () {
 	console.log("已啟動在http://localhost:3002/")
 })
+
+
 
 
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Getting Started with Kendo UI for jQuery</title>
+
+    <link href="https://kendo.cdn.telerik.com/2019.3.1023/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="https://kendo.cdn.telerik.com/2019.3.1023/styles/kendo.default.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.3.1023/js/kendo.all.min.js"></script>
+</head>
+<body>
+
+    <p>Hello <a href="https://docs.telerik.com/kendo-ui/intro/first-steps">Kendo UI for jQuery</a>!
+        This is version <strong id="kendoVersion"></strong>.</p>
+
+    <script>
+
+        $(function() {
+
+            $("#kendoVersion").text(kendo.version);
+
+        });
+
+    </script>
+
+</body>
+</html>
